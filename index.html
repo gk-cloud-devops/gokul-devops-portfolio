@@ -1,43 +1,569 @@
-<!DOCTYPE html>
-<html lang="ta">
-<head>
-    <meta charset="UTF-8">
-    <title>Gokula Kannan | DevOps & Cloud Engineer</title>
-    <style>
-        body { background-color: #0d1117; color: #58a6ff; font-family: 'Courier New', Courier, monospace; padding: 50px; }
-        .terminal { border: 1px solid #30363d; padding: 20px; border-radius: 5px; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
-        .prompt { color: #7ee787; }
-        .command { color: #f0883e; }
-        h1 { color: #ffffff; }
-        a { color: #bc8cff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
-</head>
-<body>
-    <div class="terminal">
-        <h1>> INITIALIZING GOKUL_SYSTEM...</h1>
-        <p><span class="prompt">gokul@devops:~$</span> <span class="command">whoami</span></p>
-        <p><strong>Gokula Kannan</strong></p>
-        <p>DevOps & Cloud Engineer | 4+ Years Business Development Experience</p>
-        
-        <br>
-        <p><span class="prompt">gokul@devops:~$</span> <span class="command">ls skills/</span></p>
-        <ul>
-            <li>Cloud: AWS (EC2, S3, VPC)</li>
-            <li>Containers: Docker, Docker Hub, Docker Compose</li>
-            <li>OS: Linux Administration (Ubuntu)</li>
-            <li>Automation: Shell Scripting, GitHub Actions (Learning)</li>
-        </ul>
+export default function GokulaDevopsPortfolio() {
+  const profile = {
+    name: "Gokula Kannan N",
+    shortName: "Gokula Kannan",
+    role: "Aspiring DevOps Engineer",
+    tagline: "Linux | Docker | GitHub Actions | AWS | Automation",
+    intro:
+      "Transitioning into DevOps with hands-on experience in Linux, Docker, GitHub Actions, and AWS, backed by 4+ years of professional cross-functional experience in communication, coordination, and execution.",
+    about:
+      "My focus is on building a strong foundation in DevOps through real practice. I’ve been working on Linux fundamentals, Docker, Bash scripting, Git, GitHub Actions, AWS deployment, and troubleshooting workflows. I enjoy learning by doing, understanding how systems behave, and improving step by step through hands-on implementation.",
+    longAbout:
+      "Alongside technical upskilling, my earlier work experience helped me develop responsibility, stakeholder communication, execution discipline, and a practical problem-solving mindset. That combination helps me approach DevOps as both a technical and collaborative function, where reliability, clarity, and consistency matter just as much as tools.",
+    location: "Madurai, Tamil Nadu, India",
+    email: "gkclouddevops@gmail.com",
+    phone: "+91 9042716020",
+    linkedin: "https://www.linkedin.com/in/gokul-cloud-devops/",
+    github: "https://github.com/gk-cloud-devops",
+    digitalProfile: "https://folll.io/gokul-cloud-devops",
+    linktree: "https://linktr.ee/gk_cloud_devops",
+    resume: "/Gokula_Kannan_Devops_Resume.pdf",
+    photo: "/GK_DevOps.jpg"
+  };
 
-        <br>
-        <p><span class="prompt">gokul@devops:~$</span> <span class="command">cat experience.txt</span></p>
-        <p>Over 4 years as Business Development Executive in IT sector.</p>
-        <p>Currently focusing 6 hours daily on DevOps mastery & AWS Infrastructure.</p>
+  const navItems = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Skills", href: "#skills" },
+    { label: "Experience", href: "#experience" },
+    { label: "Education", href: "#education" },
+    { label: "Certificates", href: "#certificates" },
+    { label: "Badges", href: "#badges" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" }
+  ];
 
-        <br>
-        <p><span class="prompt">gokul@devops:~$</span> <span class="command">./contact_me.sh</span></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/gokul-cloud-devops/">Connect with me</a></p>
-        <p>Digital Card: <a href="https://folll.io/gokul-cloud-devops">Folll.io Profile</a></p>
+  const skillCards = [
+    { title: "Linux", icon: "🐧" },
+    { title: "Docker", icon: "🐳" },
+    { title: "Git & GitHub", icon: "🔧" },
+    { title: "GitHub Actions", icon: "⚙️" },
+    { title: "AWS", icon: "☁️" },
+    { title: "Bash", icon: "💻" },
+    { title: "Nginx", icon: "🌐" },
+    { title: "CI/CD", icon: "🚀" }
+  ];
+
+  const experience = [
+    {
+      company: "Plurance Technologies Pvt Ltd",
+      role: "Senior Business Development Executive",
+      period: "Dec 2024 – Feb 2026",
+      description:
+        "Worked closely with technical teams, client requirements, solution discussions, and execution workflows in a fast-paced IT environment.",
+      points: [
+        "Improved communication and coordination with cross-functional teams",
+        "Built stronger ownership and delivery discipline",
+        "Gained practical exposure to software solution discussions"
+      ]
+    },
+    {
+      company: "Clarisco Solutions",
+      role: "Senior Business Development Executive",
+      period: "Jul 2023 – May 2024",
+      description:
+        "Contributed to business growth through structured opportunity handling, solution alignment, and stakeholder communication.",
+      points: [
+        "Worked on requirement understanding and proposal quality",
+        "Collaborated across teams for solution alignment",
+        "Strengthened reporting and professional communication"
+      ]
+    },
+    {
+      company: "WeAlwin Technologies",
+      role: "Business Development Executive",
+      period: "Mar 2022 – Jul 2023",
+      description:
+        "Supported B2B client engagement and built practical awareness of delivery expectations in IT services.",
+      points: [
+        "Handled client-facing communication professionally",
+        "Improved turnaround quality for proposals",
+        "Built discipline in execution and follow-up"
+      ]
+    }
+  ];
+
+  const education = [
+    {
+      type: "Postgraduate",
+      institution: "Madurai Kamaraj University",
+      course: "Master of Business Administration",
+      period: "2022 – 2024",
+      description: "Completed MBA with a focus on management, communication, and professional growth."
+    },
+    {
+      type: "Undergraduate",
+      institution: "Sethu Institute of Technology",
+      course: "Bachelor of Computer Science and Engineering",
+      period: "2016 – 2020",
+      description: "Built academic foundation in computer science, programming, and engineering fundamentals."
+    }
+  ];
+
+  const certificates = [
+    {
+      title: "DevOps BootCamp",
+      issuer: "Exlearn Technologies",
+      credential: "Issued Feb 2026 · Credential ID: 7f8ed3f4-d5d9-416e-9449-f35ddbe577c1",
+      href: "#"
+    },
+    {
+      title: "DevOps Workshop",
+      issuer: "CoreXtech IT Services Pvt. Ltd.",
+      credential: "Issued Dec 2025 · Credential ID: CERT-AE03F9A8",
+      href: "#"
+    },
+    {
+      title: "DevOps Mindset",
+      issuer: "Skillsoft",
+      credential: "Issued Oct 2025 · Credential ID: 162414314",
+      href: "#"
+    },
+    {
+      title: "Git for Beginners",
+      issuer: "Udemy",
+      credential: "Issued Oct 2024 · Credential ID: UC-93924966-45de-472a-b591-373aaadc31b3",
+      href: "#"
+    },
+    {
+      title: "Python 101",
+      issuer: "Coursera",
+      credential: "Issued Dec 2023 · Credential ID: DTFHS7JUJKPY",
+      href: "#"
+    }
+  ];
+
+  const badges = [
+    "Linux",
+    "Docker",
+    "GitHub Actions",
+    "AWS",
+    "Bash",
+    "CI/CD",
+    "Nginx",
+    "GitHub",
+    "SSH",
+    "Automation"
+  ];
+
+  const projects = [
+    {
+      title: "Automated CI/CD Deployment Pipeline",
+      subtitle: "Workflow files for GitHub Actions based build and deployment automation",
+      repoName: "gk-cloud-devops / devops-workflow-practice / .github / workflows",
+      status: "Featured Repo",
+      image: "https://placehold.co/800x500/0b1220/22d3ee?text=CI%2FCD+Pipeline",
+      description:
+        "Organized GitHub Actions workflow files for automating build and deployment steps, helping strengthen understanding of CI/CD structure, secrets handling, and deployment flow design.",
+      tags: ["GitHub Actions", "CI/CD", "Workflows", "Automation"],
+      code: "https://github.com/gk-cloud-devops/devops-workflow-practice/tree/main/.github/workflows",
+      live: "https://github.com/gk-cloud-devops/devops-workflow-practice"
+    },
+    {
+      title: "Linux Administration and Shell Automation",
+      subtitle: "Scripts for practical Linux operations, Bash automation, and repeatable tasks",
+      repoName: "gk-cloud-devops / devops-workflow-practice / scripts",
+      status: "Practice Repo",
+      image: "https://placehold.co/800x500/0b1220/22d3ee?text=Linux+%26+Automation",
+      description:
+        "A collection of Linux and shell scripting practice files focused on command-line productivity, task automation, scheduling basics, and operational troubleshooting workflows.",
+      tags: ["Linux", "Bash", "Scripts", "Automation"],
+      code: "https://github.com/gk-cloud-devops/devops-workflow-practice/tree/main/scripts",
+      live: "https://github.com/gk-cloud-devops/devops-workflow-practice"
+    },
+    {
+      title: "Docker Compose Multi-Service Environment",
+      subtitle: "Compose-based setup for container lifecycle and service communication practice",
+      repoName: "gk-cloud-devops / devops-workflow-practice / docker-compose-project",
+      status: "Hands-on Repo",
+      image: "https://placehold.co/800x500/0b1220/22d3ee?text=Docker+Compose",
+      description:
+        "A Docker Compose practice environment used to understand multi-container configuration, networking, service dependency flow, and local container orchestration basics.",
+      tags: ["Docker", "Compose", "Containers", "Networking"],
+      code: "https://github.com/gk-cloud-devops/devops-workflow-practice/tree/main/docker-compose-project",
+      live: "https://github.com/gk-cloud-devops/devops-workflow-practice"
+    }
+  ];
+
+  const socialLinks = [
+    { label: "GitHub", short: "GH", href: profile.github },
+    { label: "LinkedIn", short: "IN", href: profile.linkedin },
+    { label: "Linktree", short: "LT", href: profile.linktree },
+    { label: "Email", short: "EM", href: `mailto:${profile.email}` }
+  ];
+
+  const sectionTitle = (first, accent) => (
+    <div className="text-center">
+      <h2 className="text-3xl font-bold text-white sm:text-4xl">
+        {first} <span className="text-cyan-400">{accent}</span>
+      </h2>
+      <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-cyan-400" />
     </div>
-</body>
-</html>
+  );
+
+  return (
+    <div className="min-h-screen bg-[#020817] text-slate-100">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.10),transparent_25%),radial-gradient(circle_at_85%_8%,rgba(56,189,248,0.08),transparent_20%)]" />
+
+      <div className="relative">
+        <header className="sticky top-0 z-50 border-b border-white/10 bg-[#020817]/90 backdrop-blur-xl">
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8">
+    <a href="#home" className="text-lg font-semibold tracking-[0.02em] text-white transition hover:text-cyan-200 sm:text-xl">
+      <span className="text-white">Gokula</span> <span className="text-cyan-400">Kannan</span>
+    </a>
+
+    <nav className="hidden flex-wrap items-center gap-6 text-[15px] font-medium text-slate-400 lg:flex">
+      {navItems.map((item) => (
+        <a
+          key={item.label}
+          href={item.href}
+          className={`rounded-full px-4 py-2 transition ${
+            item.label === "Home"
+              ? "bg-cyan-400 text-slate-950 shadow-[0_0_20px_rgba(34,211,238,0.22)]"
+              : "text-slate-400 hover:bg-white/5 hover:text-cyan-300"
+          }`}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+        <main>
+          <section id="home" className="mx-auto grid max-w-7xl gap-12 px-5 py-14 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-20">
+            <div className="flex max-w-2xl flex-col justify-center">
+              <p className="text-xs font-semibold uppercase tracking-[0.26em] text-cyan-400 sm:text-sm">Welcome to my portfolio</p>
+              <h1 className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl lg:leading-[1.08]">
+                I'm <span className="text-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.18)]">{profile.shortName}</span>
+              </h1>
+              <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">
+                {profile.role} | DevOps | Cloud | Automation
+              </p>
+              <p className="mt-3 max-w-3xl text-sm font-medium tracking-[0.08em] text-cyan-300/90 sm:text-[15px]">
+                Open to Junior DevOps, Cloud, and Platform roles · Immediate Joiner · Open to Relocation
+              </p>
+              <p className="mt-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-[17px]">
+                {profile.intro}
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a href="#contact" className="rounded-2xl bg-cyan-400 min-w-[170px] px-6 py-3.5 text-sm font-semibold text-slate-950 transition hover:translate-y-[-1px] hover:shadow-[0_0_18px_rgba(34,211,238,0.28)]">
+                  Hire Me
+                </a>
+                <a href="#projects" className="rounded-2xl border border-white/10 bg-white/5 min-w-[170px] px-6 py-3.5 text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:text-cyan-200">
+                  My Works
+                </a>
+                <a href={profile.resume} className="rounded-2xl border border-white/10 bg-[#0b1730] min-w-[170px] px-6 py-3.5 text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:text-cyan-200">
+                  Download Resume
+                </a>
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-4">
+                {socialLinks.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target={item.href.startsWith("http") ? "_blank" : undefined}
+                    rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+                    className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-[#091224] text-xs font-semibold text-slate-300 transition hover:border-cyan-300/40 hover:text-cyan-200 hover:shadow-[0_0_18px_rgba(34,211,238,0.16)]"
+                    aria-label={item.label}
+                  >
+                    {item.short}
+                  </a>
+                ))}
+              </div>
+
+              <div className="mt-8 grid max-w-3xl gap-4 sm:grid-cols-3">
+                {[
+                  { value: "4+", label: "Years Professional Experience" },
+                  { value: "3", label: "Hands-on DevOps Practice Projects" },
+                  { value: "Linux · Docker · AWS", label: "Core Learning Stack" }
+                ].map((item) => (
+                  <div key={item.label} className="rounded-[18px] border border-white/10 bg-[#091224] p-4 transition hover:border-cyan-300/25 hover:shadow-[0_0_18px_rgba(34,211,238,0.08)]">
+                    <div className="text-base font-bold text-white sm:text-lg">{item.value}</div>
+                    <div className="mt-1 text-xs leading-6 text-slate-400 sm:text-sm">{item.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center lg:justify-end lg:pt-6">
+              <div className="relative flex h-[220px] w-[220px] items-center justify-center rounded-full border-2 border-cyan-500/65 bg-[#07101f] p-2.5 shadow-[0_0_0_8px_rgba(6,182,212,0.10)] sm:h-[260px] sm:w-[260px] lg:h-[300px] lg:w-[300px]">
+                <img
+                  src={profile.photo}
+                  alt={profile.name}
+                  className="h-full w-full rounded-full border-2 border-cyan-400/70 object-cover object-top"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section id="about" className="border-t border-white/5 bg-[#020b19] py-16 sm:py-20">
+            <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
+              {sectionTitle("About", "Me")}
+
+              <div className="mx-auto mt-10 max-w-5xl text-center text-base leading-8 text-slate-400 sm:text-lg sm:leading-9">
+                <p>{profile.about}</p>
+                <p className="mt-5">{profile.longAbout}</p>
+              </div>
+
+              <div className="mt-10 flex flex-wrap justify-center gap-4">
+                <a href={profile.linkedin} target="_blank" rel="noreferrer" className="rounded-full border border-white/10 bg-[#091224] px-7 py-3 text-base font-medium text-white transition hover:border-cyan-300/40 hover:text-cyan-200">
+                  LinkedIn
+                </a>
+                <a href={profile.github} target="_blank" rel="noreferrer" className="rounded-full border border-white/10 bg-[#091224] px-7 py-3 text-base font-medium text-white transition hover:border-cyan-300/40 hover:text-cyan-200">
+                  GitHub
+                </a>
+              </div>
+
+              <div className="mt-16">
+                <h3 className="text-center text-2xl font-bold text-white sm:text-3xl">
+                  My <span className="text-cyan-400">Services</span>
+                </h3>
+                <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                  {[
+                    { icon: "⚙️", title: "DevOps Practices" },
+                    { icon: "☁️", title: "Cloud Basics" },
+                    { icon: "🚀", title: "CI/CD Workflows" },
+                    { icon: "🛠️", title: "System Automation" }
+                  ].map((item) => (
+                    <div key={item.title} className="rounded-[22px] border border-white/10 bg-[#091224] p-8 text-center transition hover:border-cyan-300/25 hover:shadow-[0_0_24px_rgba(34,211,238,0.08)]">
+                      <div className="text-4xl">{item.icon}</div>
+                      <div className="mt-4 text-xl font-bold leading-8 text-white">{item.title}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="skills" className="py-16 sm:py-20">
+            <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+              {sectionTitle("My", "Skills")}
+
+              <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                {skillCards.map((skill) => (
+                  <div key={skill.title} className="rounded-[22px] border border-white/10 bg-[#07101f] p-7 text-center transition hover:border-cyan-300/30 hover:bg-[#0b1528] hover:shadow-[0_0_24px_rgba(34,211,238,0.10)]">
+                    <div className="text-5xl">{skill.icon}</div>
+                    <div className="mt-5 text-xl font-semibold text-white">{skill.title}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section id="experience" className="border-t border-white/5 bg-[#020b19] py-16 sm:py-20">
+            <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+              {sectionTitle("My", "Experience")}
+
+              <div className="mt-12 grid gap-6 lg:grid-cols-3">
+                {experience.map((item) => (
+                  <div key={item.company} className="rounded-[22px] border border-white/10 bg-[#091224] p-7 transition hover:border-cyan-300/20 hover:shadow-[0_0_20px_rgba(34,211,238,0.07)]">
+                    <div className="inline-flex rounded-full bg-cyan-400/10 px-3 py-1.5 text-xs font-semibold text-cyan-300">{item.period}</div>
+                    <h3 className="mt-5 text-2xl font-bold leading-tight text-white">{item.company}</h3>
+                    <p className="mt-2 text-base font-medium text-cyan-400">{item.role}</p>
+                    <p className="mt-4 text-sm leading-7 text-slate-400">{item.description}</p>
+                    <ul className="mt-5 space-y-2.5 text-sm leading-7 text-slate-300">
+                      {item.points.map((point) => (
+                        <li key={point} className="flex gap-3">
+                          <span className="text-cyan-400">•</span>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section id="education" className="py-16 sm:py-20">
+            <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+              {sectionTitle("My", "Education")}
+
+              <div className="mt-12 grid gap-6 lg:grid-cols-2">
+                {education.map((item) => (
+                  <div key={item.institution} className="rounded-[22px] border border-white/10 bg-[#091224] p-7 transition hover:border-cyan-300/20 hover:shadow-[0_0_20px_rgba(34,211,238,0.07)]">
+                    <div className="inline-flex rounded-full bg-cyan-400/10 px-3 py-1.5 text-xs font-semibold text-cyan-300">{item.type}</div>
+                    <h3 className="mt-5 text-2xl font-bold leading-tight text-white">{item.institution}</h3>
+                    <p className="mt-3 text-lg font-medium text-cyan-400">{item.course}</p>
+                    <p className="mt-3 text-base text-slate-400">{item.period}</p>
+                    <p className="mt-4 text-sm leading-7 text-slate-400">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section id="certificates" className="border-t border-white/5 bg-[#020b19] py-16 sm:py-20">
+            <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+              {sectionTitle("My", "Certificates")}
+
+              <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                {certificates.map((cert) => (
+                  <a key={cert.title} href={cert.href} className="rounded-[22px] border border-white/10 bg-[#091224] p-6 transition hover:border-cyan-300/30 hover:bg-[#0b1528] hover:shadow-[0_0_24px_rgba(34,211,238,0.10)]">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-400/10 text-xl font-bold text-cyan-300">
+                      ✓
+                    </div>
+                    <div className="mt-5 text-lg font-bold leading-8 text-white sm:text-xl">{cert.title}</div>
+                    <div className="mt-2 text-sm font-medium text-cyan-300">{cert.issuer}</div>
+                    <div className="mt-4 text-sm leading-7 text-slate-400">{cert.credential}</div>
+                    <div className="mt-6 inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
+                      Verified Learning
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section id="badges" className="py-16 sm:py-20">
+            <div className="mx-auto max-w-6xl px-5 text-center sm:px-6 lg:px-8">
+              {sectionTitle("Tech", "Badges")}
+              <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">Technologies I work with</p>
+
+              <div className="mt-10 flex flex-wrap justify-center gap-3.5">
+                {badges.map((badge) => (
+                  <span key={badge} className="rounded-xl border border-white/10 bg-[#091224] px-4 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-white transition hover:border-cyan-300/25 hover:shadow-[0_0_18px_rgba(34,211,238,0.08)]">
+                    {badge}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section id="projects" className="border-t border-white/5 bg-[#020b19] py-16 sm:py-20">
+            <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+              {sectionTitle("Featured", "Projects")}
+
+              <div className="mt-12 grid gap-6 lg:grid-cols-3">
+                {projects.map((project) => (
+                  <div key={project.title} className="group overflow-hidden rounded-[22px] border border-white/10 bg-[#091224] shadow-[0_8px_24px_rgba(0,0,0,0.18)] transition hover:border-cyan-300/35 hover:shadow-[0_0_28px_rgba(34,211,238,0.12)]">
+                    <div className="relative overflow-hidden">
+                      <img src={project.image} alt={project.title} className="h-52 w-full object-cover transition duration-300 group-hover:scale-[1.03]" />
+                      <div className="absolute left-4 top-4 rounded-full border border-cyan-300/20 bg-[#04101d]/85 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200 backdrop-blur">
+                        {project.status}
+                      </div>
+                    </div>
+
+                    <div className="p-6">
+                      <div className="rounded-xl border border-white/10 bg-[#020817] px-3 py-2 text-xs font-medium text-slate-400">
+                        {project.repoName}
+                      </div>
+                      <h3 className="mt-4 text-xl font-bold leading-8 text-white">{project.title}</h3>
+                      <p className="mt-2 text-sm leading-6 text-cyan-200/80">{project.subtitle}</p>
+                      <p className="mt-4 text-sm leading-7 text-slate-400">{project.description}</p>
+
+                      <div className="mt-5 flex flex-wrap gap-2.5">
+                        {project.tags.map((tag) => (
+                          <span key={tag} className="rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1.5 text-xs font-medium text-cyan-200">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="mt-6 grid grid-cols-2 gap-3">
+                        <a href={project.code} target="_blank" rel="noreferrer" className="rounded-xl border border-white/10 bg-[#020817] px-4 py-3 text-center text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:text-cyan-200 hover:shadow-[0_0_18px_rgba(34,211,238,0.08)]">
+                          View Files
+                        </a>
+                        <a href={project.live} target="_blank" rel="noreferrer" className="rounded-xl bg-cyan-400 px-4 py-3 text-center text-sm font-semibold text-slate-950 transition hover:translate-y-[-1px] hover:shadow-[0_0_18px_rgba(34,211,238,0.20)]">
+                          Open Repository
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section id="contact" className="py-16 sm:py-20">
+            <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+              {sectionTitle("Contact", "Me")}
+
+              <div className="mt-14 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+                <div>
+                  <h3 className="text-3xl font-bold text-white">Get In Touch</h3>
+                  <p className="mt-6 max-w-xl text-base leading-8 text-slate-400 sm:text-lg">
+                    Feel free to reach out if you want to collaborate, have questions, or just want to connect.
+                  </p>
+
+                  <div className="mt-8 space-y-5">
+                    {[
+                      { label: "Email", value: profile.email },
+                      { label: "Phone", value: profile.phone },
+                      { label: "Location", value: profile.location }
+                    ].map((item) => (
+                      <div key={item.label} className="flex items-start gap-4">
+                        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-400/10 text-xl text-cyan-300">•</div>
+                        <div>
+                          <div className="text-sm text-slate-400">{item.label}</div>
+                          <div className="mt-1 text-lg font-medium text-white sm:text-xl">{item.value}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="rounded-[22px] border border-white/10 bg-[#091224] p-7 sm:p-8">
+                  <div className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200">
+                    Contact Hub
+                  </div>
+                  <h3 className="mt-5 text-2xl font-bold text-white sm:text-3xl">All my professional links in one place</h3>
+                  <p className="mt-4 text-sm leading-7 text-slate-400 sm:text-base sm:leading-8">
+                    For quick access to my GitHub, LinkedIn, resume, and other profile links, use my Linktree page.
+                  </p>
+
+                  <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                    <a href={profile.linktree} target="_blank" rel="noreferrer" className="rounded-2xl bg-cyan-400 px-5 py-4 text-center text-sm font-semibold text-slate-950 transition hover:translate-y-[-1px] hover:shadow-[0_0_18px_rgba(34,211,238,0.18)]">
+                      Open Linktree
+                    </a>
+                    <a href={profile.resume} className="rounded-2xl border border-white/10 bg-[#020817] px-5 py-4 text-center text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:text-cyan-200">
+                      Download Resume
+                    </a>
+                  </div>
+
+                  <div className="mt-6 space-y-3">
+                    {[
+                      { label: "GitHub", href: profile.github },
+                      { label: "LinkedIn", href: profile.linkedin },
+                      { label: "Digital Profile", href: profile.digitalProfile },
+                      { label: "Linktree", href: profile.linktree }
+                    ].map((item) => (
+                      <a key={item.label} href={item.href} target="_blank" rel="noreferrer" className="flex items-center justify-between rounded-2xl border border-white/10 bg-[#020817] px-4 py-3 text-sm text-slate-300 transition hover:border-cyan-300/30 hover:text-cyan-200">
+                        <span>{item.label}</span>
+                        <span className="text-cyan-300">↗</span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer className="border-t border-white/10 bg-[#020817] py-6">
+          <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 text-sm text-slate-400 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+            <div>2026 Portfolio. All rights reserved.</div>
+            <div className="flex gap-4">
+              <a href={profile.github} target="_blank" rel="noreferrer" className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-[#091224] text-xs font-semibold text-slate-300 transition hover:border-cyan-300/30 hover:text-cyan-200">
+                GH
+              </a>
+              <a href={profile.linkedin} target="_blank" rel="noreferrer" className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-[#091224] text-xs font-semibold text-slate-300 transition hover:border-cyan-300/30 hover:text-cyan-200">
+                IN
+              </a>
+              <a href={profile.linktree} target="_blank" rel="noreferrer" className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-[#091224] text-xs font-semibold text-slate-300 transition hover:border-cyan-300/30 hover:text-cyan-200">
+                LT
+              </a>
+              <a href={`mailto:${profile.email}`} className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-[#091224] text-xs font-semibold text-slate-300 transition hover:border-cyan-300/30 hover:text-cyan-200">
+                EM
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  );
+}
+
