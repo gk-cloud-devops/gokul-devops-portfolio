@@ -522,15 +522,15 @@
       <a href="#home" class="brand"><span>Gokula</span> <span class="accent">Kannan</span></a>
       <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
       <nav class="nav" id="navMenu">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#certificates">Certificates</a>
-        <a href="#badges">Badges</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" data-section="home" class="active">Home</a>
+        <a href="#about" data-section="about">About</a>
+        <a href="#skills" data-section="skills">Skills</a>
+        <a href="#experience" data-section="experience">Experience</a>
+        <a href="#education" data-section="education">Education</a>
+        <a href="#certificates" data-section="certificates">Certificates</a>
+        <a href="#badges" data-section="badges">Badges</a>
+        <a href="#projects" data-section="projects">Projects</a>
+        <a href="#contact" data-section="contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -936,9 +936,42 @@
     }
 
     const navLinks = document.querySelectorAll('.nav a');
+    const sections = document.querySelectorAll('main section[id]');
+
     navLinks.forEach(link => {
       link.addEventListener('click', () => navMenu.classList.remove('open'));
+    });
+
+    function setActiveNav(sectionId) {
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.dataset.section === sectionId);
+      });
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let visibleSection = null;
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            visibleSection = entry.target.id;
+          }
+        });
+        if (visibleSection) setActiveNav(visibleSection);
+      },
+      {
+        root: null,
+        rootMargin: '-35% 0px -45% 0px',
+        threshold: 0.1,
+      }
+    );
+
+    sections.forEach(section => observer.observe(section));
+
+    window.addEventListener('load', () => {
+      const hash = window.location.hash.replace('#', '') || 'home';
+      setActiveNav(hash);
     });
   </script>
 </body>
 </html>
+
