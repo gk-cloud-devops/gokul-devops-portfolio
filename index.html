@@ -355,16 +355,19 @@
     }
     .project-image {
       position: relative;
-      height: 220px;
-      overflow: hidden;
+      height: 160px; /* MODIFIED: Uniform structural block wrapper */
+      background: #040d21;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--line);
     }
-    .project-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
+    .project-image-text {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.02em;
     }
-    .project-card:hover .project-image img { transform: scale(1.03); }
     .status-pill {
       position: absolute;
       top: 16px;
@@ -380,7 +383,17 @@
       text-transform: uppercase;
       backdrop-filter: blur(10px);
     }
-    .project-content { padding: 24px; }
+    .project-content { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; }
+    
+    /* FIXED: Complete structural title override layout patterns */
+    .project-content h3 {
+      margin: 14px 0 0 !important;
+      font-size: 1.25rem !important; 
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      line-height: 1.45;
+    }
+    
     .repo-strip {
       padding: 10px 12px;
       border-radius: 14px;
@@ -391,7 +404,7 @@
       line-height: 1.5;
       word-break: break-word;
     }
-    .tag-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; margin-bottom: auto; }
     .tag { font-size: 0.74rem; padding: 8px 12px; letter-spacing: 0.04em; text-transform: none; }
     .project-actions {
       display: grid;
@@ -567,7 +580,7 @@
               <span>Hands-on DevOps Practice Projects</span>
             </div>
             <div class="metric-card">
-              <strong>Linux · Docker · AWS</strong>
+              <strong>AWS · K8s · IaC</strong>
               <span>Core Learning Stack</span>
             </div>
           </div>
@@ -605,23 +618,23 @@
           <div class="grid-4">
             <div class="service-card">
               <div class="service-icon">⚙️</div>
-              <h3>DevOps Practices</h3>
-              <p>Focused learning around workflows, reliability, and automation fundamentals.</p>
+              <h3>Infrastructure Provisioning</h3>
+              <p>Automating secure deployment topologies, custom cloud network routing maps and VPC setups.</p>
             </div>
             <div class="service-card">
               <div class="service-icon">☁️</div>
-              <h3>Cloud Basics</h3>
-              <p>Hands-on exposure to AWS services, deployment flow, and environment setup.</p>
+              <h3>Container Orchestration</h3>
+              <p>Designing multi-node cluster controls, pods microservices architecture rules and container networks.</p>
             </div>
             <div class="service-card">
               <div class="service-icon">🚀</div>
-              <h3>CI/CD Workflows</h3>
-              <p>Practice around build pipelines, GitHub Actions, and deployment logic.</p>
+              <h3>CI/CD Architecture</h3>
+              <p>Practice around progressive automated pipeline systems layout design, testing checks and integration steps.</p>
             </div>
             <div class="service-card">
               <div class="service-icon">🛠️</div>
-              <h3>System Automation</h3>
-              <p>Linux commands, shell scripting, repeatable task execution, and operational discipline.</p>
+              <h3>Configuration Management</h3>
+              <p>Linux server admin utilities management, target declarative state verification checks and automated shell script engines.</p>
             </div>
           </div>
         </div>
@@ -636,14 +649,14 @@
         </div>
 
         <div class="grid-4">
-          <div class="skill-card"><div class="skill-icon">🐧</div><h3>Linux</h3><p>Command line fundamentals, navigation, permissions, and server basics.</p></div>
-          <div class="skill-card"><div class="skill-icon">🐳</div><h3>Docker</h3><p>Images, containers, volumes, and environment setup practice.</p></div>
-          <div class="skill-card"><div class="skill-icon">🔧</div><h3>Git & GitHub</h3><p>Version control, repo workflow, collaboration, and code management.</p></div>
-          <div class="skill-card"><div class="skill-icon">⚙️</div><h3>GitHub Actions</h3><p>Workflow automation, pipeline structure, and CI/CD practice.</p></div>
-          <div class="skill-card"><div class="skill-icon">☁️</div><h3>AWS</h3><p>EC2-based learning, deployment flow, and cloud environment familiarity.</p></div>
-          <div class="skill-card"><div class="skill-icon">💻</div><h3>Bash</h3><p>Scripts for automation, repeatable tasks, and operational support.</p></div>
-          <div class="skill-card"><div class="skill-icon">🌐</div><h3>Nginx</h3><p>Basic web server understanding and deployment-related exposure.</p></div>
-          <div class="skill-card"><div class="skill-icon">🚀</div><h3>CI/CD</h3><p>Practical learning around automated build and deployment workflows.</p></div>
+          <div class="skill-card"><div class="skill-icon">🏗️</div><h3>Infrastructure as Code</h3><p>Modular declarative blueprint patterns development inside AWS fabrics with HashiCorp Terraform engines.</p></div>
+          <div class="skill-card"><div class="skill-icon">☸️</div><h3>Kubernetes (EKS)</h3><p>Managed control planes configuration layout patterns management, IAM policy rules and worker node pools routing.</p></div>
+          <div class="skill-card"><div class="skill-icon">🐳</div><h3>Docker Deployment</h3><p>Isolated server node containers architecture prototyping, dynamic local bridges networks setup and cluster state checks.</p></div>
+          <div class="skill-card"><div class="skill-icon">⚙️</div><h3>GitHub Actions</h3><p>Progressive workflow matrices setup, secrets vaults isolation handling models and integration deployment checks.</p></div>
+          <div class="skill-card"><div class="skill-icon">🐧</div><h3>Linux System Administration</h3><p>Terminal utilities optimization routines scripting, task processes priority handling control and structural maintenance loops.</p></div>
+          <div class="skill-card"><div class="skill-icon">💻</div><h3>Bash Scripting</h3><p>Dynamic sequential automation tasks triggers engineering, process alerts filters control and state isolation monitors.</p></div>
+          <div class="skill-card"><div class="skill-icon">🌐</div><h3>Cloud Networking</h3><p>VPC network design parameters mapping, route tables maps optimization rules and Security Groups firewall setups.</p></div>
+          <div class="skill-card"><div class="skill-icon">📝</div><h3>Configuration Files Schema</h3><p>Structured declarative specification definitions layout writing, manifest models blueprint validation and design structures.</p></div>
         </div>
       </div>
     </section>
@@ -765,14 +778,18 @@
         <div class="badge-cloud" style="margin-top:32px;">
           <span>Linux</span>
           <span>Docker</span>
+          <span>Docker Compose</span>
+          <span>Kubernetes</span>
+          <span>AWS EKS</span>
+          <span>Terraform IaC</span>
+          <span>VPC Architecture</span>
           <span>GitHub Actions</span>
-          <span>AWS</span>
-          <span>Bash</span>
-          <span>CI/CD</span>
-          <span>Nginx</span>
-          <span>GitHub</span>
-          <span>SSH</span>
-          <span>Automation</span>
+          <span>Bash Shell</span>
+          <span>CI/CD Automation</span>
+          <span>Nginx Proxy</span>
+          <span>GitHub Workflows</span>
+          <span>SSH Security</span>
+          <span>YAML Manifests</span>
         </div>
       </div>
     </section>
@@ -787,12 +804,12 @@
         <div class="grid-3">
           <article class="project-card">
             <div class="project-image">
-              <img src="https://placehold.co/800x500/0b1220/22d3ee?text=CI%2FCD+Pipeline" alt="CI/CD Pipeline" />
+              <div class="project-image-text">CI/CD Pipeline</div>
               <span class="status-pill">Featured Repo</span>
             </div>
             <div class="project-content">
               <div class="repo-strip">gk-cloud-devops / devops-workflow-practice / .github / workflows</div>
-              <h3>Automated CI/CD Deployment Pipeline</h3>
+              <h3><strong>CI/CD Pipeline</strong></h3>
               <p style="color: var(--accent-2);">Workflow files for GitHub Actions based build and deployment automation</p>
               <p>Organized GitHub Actions workflow files for automating build and deployment steps, helping strengthen understanding of CI/CD structure, secrets handling, and deployment flow design.</p>
               <div class="tag-row">
@@ -810,46 +827,46 @@
 
           <article class="project-card">
             <div class="project-image">
-              <img src="https://placehold.co/800x500/0b1220/22d3ee?text=Linux+%26+Automation" alt="Linux Automation" />
-              <span class="status-pill">Practice Repo</span>
+              <div class="project-image-text">Multi-Node Infrastructure</div>
+              <span class="status-pill">Infrastructure Sandbox</span>
             </div>
             <div class="project-content">
-              <div class="repo-strip">gk-cloud-devops / devops-workflow-practice / scripts</div>
-              <h3>Linux Administration and Shell Automation</h3>
-              <p style="color: var(--accent-2);">Scripts for practical Linux operations, Bash automation, and repeatable tasks</p>
-              <p>A collection of Linux and shell scripting practice files focused on command-line productivity, task automation, scheduling basics, and operational troubleshooting workflows.</p>
+              <div class="repo-strip">gk-cloud-devops / devops-workflow-practice</div>
+              <h3><strong>Multi-Node Infrastructure</strong></h3>
+              <p style="color: var(--accent-2);">Modular Terraform configurations and high-scale local cluster containment</p>
+              <p>Programmed dynamic Terraform configurations using structural lookups to automatically provision instance nodes inside AWS ap-southeast-2 region. Manually engineered public/private network subnet layouts, IGW routing architectures and Security Group firewalls on AWS Console. Orchestrated a simulated local grid of 20+ isolated computing nodes via iterative container injection scripts running under 2GB RAM limits.</p>
               <div class="tag-row">
-                <span class="tag">Linux</span>
-                <span class="tag">Bash</span>
-                <span class="tag">Scripts</span>
-                <span class="tag">Automation</span>
+                <span class="tag">Terraform IaC</span>
+                <span class="tag">AWS VPC Layout</span>
+                <span class="tag">Docker Bridge</span>
+                <span class="tag">Bash Script Matrices</span>
               </div>
               <div class="project-actions">
-                <a class="ghost" href="https://github.com/gk-cloud-devops/devops-workflow-practice/tree/main/scripts" target="_blank" rel="noreferrer">View Files</a>
-                <a class="fill" href="https://github.com/gk-cloud-devops/devops-workflow-practice" target="_blank" rel="noreferrer">Open Repository</a>
+                <a class="ghost" href="https://github.com/gk-cloud-devops/devops-workflow-practice/tree/main" target="_blank" rel="noreferrer">View Code</a>
+                <a class="fill" href="https://github.com/gk-cloud-devops/devops-workflow-practice" target="_blank" rel="noreferrer">Explore Repo</a>
               </div>
             </div>
           </article>
 
           <article class="project-card">
             <div class="project-image">
-              <img src="https://placehold.co/800x500/0b1220/22d3ee?text=Docker+Compose" alt="Docker Compose" />
-              <span class="status-pill">Hands-on Repo</span>
+              <div class="project-image-text">Kubernetes Automation</div>
+              <span class="status-pill">Transition Specs</span>
             </div>
             <div class="project-content">
-              <div class="repo-strip">gk-cloud-devops / devops-workflow-practice / docker-compose-project</div>
-              <h3>Docker Compose Multi-Service Environment</h3>
-              <p style="color: var(--accent-2);">Compose-based setup for container lifecycle and service communication practice</p>
-              <p>A Docker Compose practice environment used to understand multi-container configuration, networking, service dependency flow, and local container orchestration basics.</p>
+              <div class="repo-strip">gk-cloud-devops / devops-workflow-practice</div>
+              <h3><strong>Kubernetes Automation</strong></h3>
+              <p style="color: var(--accent-2);">Production-grade AWS EKS clusters provisioning and workload orchestration schemas</p>
+              <p>Engineered and deployed scalable, high-availability Multi-AZ VPC network topologies on AWS systems using structural Terraform definitions. Provisioned managed Amazon EKS container clusters including systematic control planes tracking models, secure IAM isolation routing mappings, and optimized EC2 worker instance pools node configurations. Designed structured YAML schemas and manifests rules for clean workload deployments.</p>
               <div class="tag-row">
-                <span class="tag">Docker</span>
-                <span class="tag">Compose</span>
-                <span class="tag">Containers</span>
-                <span class="tag">Networking</span>
+                <span class="tag">AWS EKS Cluster</span>
+                <span class="tag">Multi-AZ Subnets</span>
+                <span class="tag">YAML Manifests</span>
+                <span class="tag">IAM Control Plane</span>
               </div>
               <div class="project-actions">
-                <a class="ghost" href="https://github.com/gk-cloud-devops/devops-workflow-practice/tree/main/docker-compose-project" target="_blank" rel="noreferrer">View Files</a>
-                <a class="fill" href="https://github.com/gk-cloud-devops/devops-workflow-practice" target="_blank" rel="noreferrer">Open Repository</a>
+                <a class="ghost" href="https://github.com/gk-cloud-devops/devops-workflow-practice/tree/main" target="_blank" rel="noreferrer">View Specifications</a>
+                <a class="fill" href="https://github.com/gk-cloud-devops/devops-workflow-practice" target="_blank" rel="noreferrer">Explore Repo</a>
               </div>
             </div>
           </article>
@@ -903,7 +920,7 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <header class="site-header" style="display:none;"></header> <footer class="site-footer">
     <div class="container footer-inner">
       <div>Copyright@2026 Gokul's Portfolio.All Rights Reserved.</div>
       <div class="footer-icons">
