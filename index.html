@@ -355,7 +355,7 @@
     }
     .project-image {
       position: relative;
-      height: 160px; /* MODIFIED: Uniform structural block wrapper */
+      height: 160px;
       background: #040d21;
       display: flex;
       align-items: center;
@@ -367,6 +367,8 @@
       font-weight: 800;
       color: var(--accent);
       letter-spacing: -0.02em;
+      text-align: center;
+      padding: 0 10px;
     }
     .status-pill {
       position: absolute;
@@ -385,7 +387,6 @@
     }
     .project-content { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; }
     
-    /* FIXED: Complete structural title override layout patterns */
     .project-content h3 {
       margin: 14px 0 0 !important;
       font-size: 1.25rem !important; 
@@ -576,7 +577,7 @@
               <span>Years Professional Experience</span>
             </div>
             <div class="metric-card">
-              <strong>4+</strong>
+              <strong>5+</strong>
               <span>Hands-on DevOps Practice Projects</span>
             </div>
             <div class="metric-card">
@@ -633,8 +634,8 @@
             </div>
             <div class="service-card">
               <div class="service-icon">🛠️</div>
-              <h3>Configuration Management</h3>
-              <p>Linux server admin utilities management, target declarative state verification checks and automated shell script engines.</p>
+              <h3>High Availability Web Stack</h3>
+              <p>Configuring caching layers, database backends, reverse proxies, and production application nodes tuning.</p>
             </div>
           </div>
         </div>
@@ -653,10 +654,10 @@
           <div class="skill-card"><div class="skill-icon">☸️</div><h3>Kubernetes (EKS)</h3><p>Managed control planes configuration layout patterns management, IAM policy rules and worker node pools routing.</p></div>
           <div class="skill-card"><div class="skill-icon">🐳</div><h3>Docker Deployment</h3><p>Isolated server node containers architecture prototyping, dynamic local bridges networks setup and cluster state checks.</p></div>
           <div class="skill-card"><div class="skill-icon">⚙️</div><h3>GitHub Actions</h3><p>Progressive workflow matrices setup, secrets vaults isolation handling models and integration deployment checks.</p></div>
-          <div class="skill-card"><div class="skill-icon">🐧</div><h3>Linux System Administration</h3><p>Terminal utilities optimization routines scripting, task processes priority handling control and structural maintenance loops.</p></div>
-          <div class="skill-card"><div class="skill-icon">💻</div><h3>Bash Scripting</h3><p>Dynamic sequential automation tasks triggers engineering, process alerts filters control and state isolation monitors.</p></div>
-          <div class="skill-card"><div class="skill-icon">🌐</div><h3>Cloud Networking</h3><p>VPC network design parameters mapping, route tables maps optimization rules and Security Groups firewall setups.</p></div>
-          <div class="skill-card"><div class="skill-icon">📝</div><h3>Configuration Files Schema</h3><p>Structured declarative specification definitions layout writing, manifest models blueprint validation and design structures.</p></div>
+          <div class="skill-card"><div class="skill-icon">⚡</div><h3>Performance Caching</h3><p>Implementing Redis in-memory session stores and Varnish full-page server side accelerators optimization layouts.</p></div>
+          <div class="skill-card"><div class="skill-icon">🔍</div><h3>Enterprise Search Engine</h3><p>Integrating structured search optimization functions with production elastic infrastructure layers mapping.</p></div>
+          <div class="skill-card"><div class="skill-icon">🌐</div><h3>Web Servers Architecture</h3><p>Nginx reverse proxies, virtual hosting setups, multi-tier PHP-FPM backend integrations and server network management.</p></div>
+          <div class="skill-card"><div class="skill-icon">🗄️</div><h3>Database Administration</h3><p>MySQL 8 server storage configurations deployment, logs health checks automation routines, and error monitoring triggers.</p></div>
         </div>
       </div>
     </section>
@@ -667,8 +668,9 @@
           <h2>My <span>Experience</span></h2>
           <div class="line"></div>
         </div>
-        
-         <div class="grid-3">
+
+        <!-- FIXED: Implemented clean grid-3 architecture integration structure -->
+        <div class="grid-3">
           <div class="experience-card">
             <span class="badge-date">Dec 2024 – Feb 2026</span>
             <h3>Plurance Technologies</h3>
@@ -787,7 +789,7 @@
         </div>
         <p style="text-align:center; color: var(--muted); margin-top: -16px;">Technologies I work with</p>
         <div class="badge-cloud" style="margin-top:32px;">
-          <span>Linux</span>
+          <span>Linux (Debian/Ubuntu)</span>
           <span>Docker</span>
           <span>Docker Compose</span>
           <span>Kubernetes</span>
@@ -796,11 +798,13 @@
           <span>VPC Architecture</span>
           <span>GitHub Actions</span>
           <span>Bash Shell</span>
-          <span>CI/CD Automation</span>
           <span>Nginx Proxy</span>
-          <span>GitHub Workflows</span>
-          <span>SSH Security</span>
-          <span>YAML Manifests</span>
+          <span>MySQL 8</span>
+          <span>PHP-FPM Stack</span>
+          <span>Redis Cache</span>
+          <span>Varnish Accelerator</span>
+          <span>Elasticsearch</span>
+          <span>SSL/HTTPS Hooks</span>
         </div>
       </div>
     </section>
@@ -813,6 +817,7 @@
         </div>
 
         <div class="grid-3">
+          <!-- CARD 1: CI/CD Pipeline (Fixed Visual Size) -->
           <article class="project-card">
             <div class="project-image">
               <div class="project-image-text">CI/CD Pipeline</div>
@@ -836,6 +841,7 @@
             </div>
           </article>
 
+          <!-- CARD 2: Multi-Node Infrastructure -->
           <article class="project-card">
             <div class="project-image">
               <div class="project-image-text">Multi-Node Infrastructure</div>
@@ -859,6 +865,7 @@
             </div>
           </article>
 
+          <!-- CARD 3: Kubernetes Automation -->
           <article class="project-card">
             <div class="project-image">
               <div class="project-image-text">Kubernetes Automation</div>
@@ -878,6 +885,30 @@
               <div class="project-actions">
                 <a class="ghost" href="https://github.com/gk-cloud-devops/devops-workflow-practice/tree/main" target="_blank" rel="noreferrer">View Specifications</a>
                 <a class="fill" href="https://github.com/gk-cloud-devops/devops-workflow-practice" target="_blank" rel="noreferrer">Explore Repo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 4: Magento Production Stack Deployment (NEW) -->
+          <article class="project-card">
+            <div class="project-image">
+              <div class="project-image-text">Magento Production Stack</div>
+              <span class="status-pill">Web Architecture</span>
+            </div>
+            <div class="project-content">
+              <div class="repo-strip">gk-cloud-devops/mgt-magento2-production-stack-development-linux-admin</div>
+              <h3><strong>Magento Production Stack Deployment</strong></h3>
+              <p style="color: var(--accent-2);">High-performance enterprise application stack hosting layout engineering</p>
+              <p>Built and deployed a full production-grade Magento hosting environment on AWS EC2 nodes layered with Debian 12 virtual environments. Configured Nginx reverse proxy routing optimizations integrated natively with PHP-FPM backend computation units and decoupled MySQL 8 database management engines. Wired advanced Redis cache loops for data session state isolation and Varnish caching filters to maximize server edge load capabilities. Integrated Elasticsearch layers for product search functionality, managed custom SSL/HTTPS virtual hosting configs, tuned system logs and debugged stack errors for high availability targets.</p>
+              <div class="tag-row">
+                <span class="tag">Nginx Proxy</span>
+                <span class="tag">Redis & Varnish</span>
+                <span class="tag">Elasticsearch</span>
+                <span class="tag">MySQL 8 Backend</span>
+              </div>
+              <div class="project-actions">
+                <a class="ghost" href="https://github.com/gk-cloud-devops/mgt-magento2-production-stack-development-linux-admin/tree/main" target="_blank" rel="noreferrer">View Deployment</a>
+                <a class="fill" href="https://github.com/gk-cloud-devops/mgt-magento2-production-stack-development-linux-admin/" target="_blank" rel="noreferrer">Explore Repo</a>
               </div>
             </div>
           </article>
@@ -931,7 +962,7 @@
     </section>
   </main>
 
-  <header class="site-header" style="display:none;"></header> <footer class="site-footer">
+  <footer class="site-footer">
     <div class="container footer-inner">
       <div>Copyright@2026 Gokul's Portfolio.All Rights Reserved.</div>
       <div class="footer-icons">
