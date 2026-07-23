@@ -63,8 +63,15 @@
       font-weight: 700;
       letter-spacing: 0.02em;
       white-space: nowrap;
+      display: flex;
+      align-items: center;
     }
     .brand .accent { color: var(--accent); }
+    .brand-logo {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
     .nav {
       display: flex;
       flex-wrap: wrap;
@@ -533,7 +540,7 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#home" class="brand"><span>Gokula</span> <span class="accent">Kannan</span></a>
+      <a href="#home" class="brand"><img src="./GK_Cloud_Devops_Logo.png" alt="GK Cloud DevOps" class="brand-logo" /></a>
       <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
       <nav class="nav" id="navMenu">
         <a href="#home" data-section="home" class="active">Home</a>
