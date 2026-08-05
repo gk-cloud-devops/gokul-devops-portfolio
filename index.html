@@ -361,13 +361,14 @@
       flex-direction: column;
     }
     .project-image {
-      position: relative;
-      height: 160px;
-      background: #040d21;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-bottom: 1px solid var(--line);
+     position: relative;
+     height: 180px;
+     background: #040d21;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-bottom: 1px solid var(--line);
+     padding: 36px 16px 16px;
     }
     .project-image-text {
       font-size: 1.35rem;
@@ -379,18 +380,19 @@
     }
     .status-pill {
       position: absolute;
-      top: 16px;
+      top: 12px;
       left: 16px;
-      padding: 8px 12px;
+      padding: 6px 12px;
       border-radius: 999px;
-      background: rgba(4,16,29,0.85);
-      border: 1px solid rgba(34,211,238,0.20);
+      background: rgba(4,16,29,0.92);
+      border: 1px solid rgba(34,211,238,0.25);
       color: var(--accent-2);
-      font-size: 0.72rem;
+      font-size: 0.70rem;
       font-weight: 800;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       backdrop-filter: blur(10px);
+      z-index: 2;
     }
     .project-content { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; }
     
@@ -500,7 +502,7 @@
       .hero-copy { max-width: 100%; }
       .hero-photo-wrap { justify-content: center; padding-top: 0; }
       .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
       .contact-grid { grid-template-columns: 1fr; }
     }
 
@@ -562,20 +564,14 @@
         <div class="hero-copy">
           <p class="eyebrow">Welcome to my portfolio</p>
           <h1>I'm <span class="accent">Gokula Kannan</span></h1>
-          <p class="hero-role">Aspiring DevOps Engineer | DevOps | Cloud | Automation</p>
-          <p class="hero-meta">Open to Junior DevOps, Cloud, and Platform roles · Immediate Joiner · Open to Relocation</p>
-          <p class="hero-desc">Transitioning into DevOps with hands-on experience in Linux, Docker, GitHub Actions, and AWS, backed by 4+ years of professional cross-functional experience in communication, coordination, and execution.</p>
+          <p class="hero-role">DevOps & Cloud Engineer | Infrastructure & Automation Specialist</p>
+          <p class="hero-meta">Available for Full-time DevOps/Cloud Roles & Freelance Consulting · Immediate Joiner</p>
+          <p class="hero-desc">Specializing in cloud infrastructure automation, container orchestration, and CI/CD pipeline engineering. Backed by 4+ years of IT client-facing and execution experience.</p>
 
           <div class="cta-row">
             <a class="btn btn-primary" href="#contact">Hire Me</a>
             <a class="btn btn-secondary" href="#projects">My Works</a>
             <a class="btn btn-dark" href="./Gokula_Kannan_DevOps,Cloud,Linux_Resume.pdf" target="_blank" rel="noreferrer">Download Resume</a>
-          </div>
-
-          <div class="social-row">
-            <a class="social-icon" href="https://github.com/gk-cloud-devops" target="_blank" rel="noreferrer">GH</a>
-            <a class="social-icon" href="https://www.linkedin.com/in/gokul-cloud-devops/" target="_blank" rel="noreferrer">IN</a>
-            <a class="social-icon" href="https://linktr.ee/gk_cloud_devops" target="_blank" rel="noreferrer">LT</a>
           </div>
 
           <div class="metric-row">
@@ -589,7 +585,7 @@
             </div>
             <div class="metric-card">
               <strong>AWS · K8s · IaC</strong>
-              <span>Core Learning Stack</span>
+              <span>Production Stack</span>
             </div>
           </div>
         </div>
@@ -610,8 +606,8 @@
         </div>
 
         <div class="about-copy">
-          <p>My focus is on building a strong foundation in DevOps through real practice. I’ve been working on Linux fundamentals, Docker, Bash scripting, Git, GitHub Actions, AWS deployment, and troubleshooting workflows. I enjoy learning by doing, understanding how systems behave, and improving step by step through hands-on implementation.</p>
-          <p>Alongside technical upskilling, my earlier work experience helped me develop responsibility, stakeholder communication, execution discipline, and a practical problem-solving mindset. That combination helps me approach DevOps as both a technical and collaborative function, where reliability, clarity, and consistency matter just as much as tools.</p>
+          <p>I engineer reliable, automated cloud infrastructure and CI/CD systems using AWS, Docker, Terraform, and GitHub Actions. My goal is to streamline software deployment, lower downtime, and optimize cloud infrastructure costs.</p>
+          <p>With 4+ years of cross-functional experience in client engagement and execution, I bridge the gap between business objectives and technical cloud operations.</p>
         </div>
 
         <div class="pill-links">
@@ -627,22 +623,22 @@
             <div class="service-card">
               <div class="service-icon">⚙️</div>
               <h3>Infrastructure Provisioning</h3>
-              <p>Automating secure deployment topologies, custom cloud network routing maps and VPC setups.</p>
+              <p>Automating AWS VPC topologies, custom subnets, security groups, and IaC deployment with Terraform</p>
             </div>
             <div class="service-card">
               <div class="service-icon">☁️</div>
               <h3>Container Orchestration</h3>
-              <p>Designing multi-node cluster controls, pods microservices architecture rules and container networks.</p>
+              <p>Deploying Dockerized applications and managing Kubernetes (EKS) clusters with ingress and auto-scaling</p>
             </div>
             <div class="service-card">
               <div class="service-icon">🚀</div>
               <h3>CI/CD Architecture</h3>
-              <p>Practice around progressive automated pipeline systems layout design, testing checks and integration steps.</p>
+              <p>Building zero-downtime CI/CD pipelines with GitHub Actions/Jenkins, Docker image registries, and automated deployments</p>
             </div>
             <div class="service-card">
               <div class="service-icon">🛠️</div>
               <h3>High Availability Web Stack</h3>
-              <p>Configuring caching layers, database backends, reverse proxies, and production application nodes tuning.</p>
+              <p>Configuring high-performance Nginx reverse proxies, SSL certificates, Redis/Varnish caching, and MySQL databases</p>
             </div>
           </div>
         </div>
@@ -657,10 +653,10 @@
         </div>
 
         <div class="grid-4">
-          <div class="skill-card"><div class="skill-icon">🏗️</div><h3>Infrastructure as Code</h3><p>Modular declarative blueprint patterns development inside AWS fabrics with HashiCorp Terraform engines.</p></div>
-          <div class="skill-card"><div class="skill-icon">☸️</div><h3>Kubernetes (EKS)</h3><p>Managed control planes configuration layout patterns management, IAM policy rules and worker node pools routing.</p></div>
-          <div class="skill-card"><div class="skill-icon">🐳</div><h3>Docker Deployment</h3><p>Isolated server node containers architecture prototyping, dynamic local bridges networks setup and cluster state checks.</p></div>
-          <div class="skill-card"><div class="skill-icon">⚙️</div><h3>GitHub Actions</h3><p>Progressive workflow matrices setup, secrets vaults isolation handling models and integration deployment checks.</p></div>
+          <div class="skill-card"><div class="skill-icon">🏗️</div><h3>Infrastructure as Code</h3><p>Writing modular, reusable Terraform modules to provision scalable cloud infrastructure on AWS with automated state management</p></div>
+          <div class="skill-card"><div class="skill-icon">☸️</div><h3>Kubernetes (EKS)</h3><p>Configuring EKS control planes, IAM roles, worker node groups, ingress controllers, and cluster networking</p></div>
+          <div class="skill-card"><div class="skill-icon">🐳</div><h3>Docker Deployment</h3><p>Building multi-stage Dockerfiles, optimizing container images, and configuring isolated Docker bridge networks</p></div>
+          <div class="skill-card"><div class="skill-icon">⚙️</div><h3>GitHub Actions</h3><p>Designing automated CI/CD pipelines with workflow matrices, environment secrets management, and automated deployment checks</p></div>
           <div class="skill-card"><div class="skill-icon">⚡</div><h3>Performance Caching</h3><p>Implementing Redis in-memory session stores and Varnish full-page server side accelerators optimization layouts.</p></div>
           <div class="skill-card"><div class="skill-icon">🔍</div><h3>Enterprise Search Engine</h3><p>Integrating structured search optimization functions with production elastic infrastructure layers mapping.</p></div>
           <div class="skill-card"><div class="skill-icon">🌐</div><h3>Web Servers Architecture</h3><p>Nginx reverse proxies, virtual hosting setups, multi-tier PHP-FPM backend integrations and server network management.</p></div>
@@ -955,7 +951,7 @@
             <h3>All my professional links in one place</h3>
             <p>For quick access to my GitHub, LinkedIn, resume, and other profile links, use my Linktree page.</p>
             <div class="project-actions" style="margin-top:18px;">
-              <a class="fill" href="https://linktr.ee/gk_cloud_devops" target="_blank" rel="noreferrer">Open Linktree</a>
+              <a class="fill" href="https://calendar.app.google/vPMowi5FGv7bp92W8" target="_blank" rel="noreferrer">Book a Free Cloud Audit</a>
               <a class="ghost" href="./Gokula_Kannan_DevOps,Cloud,Linux_Resume.pdf" target="_blank" rel="noreferrer">Download Resume</a>
             </div>
             <div class="contact-links">
